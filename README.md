@@ -1,0 +1,4 @@
+- 👋 Hi, I’m @KutzMio
+- 👀 I’m interested in coding, drawing and working out.
+- 🌱 I’m currently learning HMTL but I plan to learn JavaScript and CSS in the near future.
+- 📫 You can reach me through my Instagram(@miojo_with_miojo) and through my Linkedin.
