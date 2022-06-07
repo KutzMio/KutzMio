@@ -1,61 +1,61 @@
-<script>
-        var a, b, logica;
+    <script>
+        var aa, bb, logica;
         for (i = 0; i < 2; i++) {
             var [p, sinal, q] = prompt("Apresente a equação usando os símbolos: '>', '&', 'v', ou '<>'.").replace(" ","").replace(" ","").split("");
             var [a,b] = prompt("Apresente o valor lógico de p e q utilizando V ou F:").split("");
-            if (sinal == "v" && a == "F" && b == "F") {
-                if (i == 0) {
-                    a = false;
-                } else if (i == 1) {
-                    b = false;
-                }
-            } else if (sinal == "v" && a != "F" || b != "F") {
-                if (i == 0){
-                    a = true;
-                } else if (i == 1) {
-                    b = true;
-                }
-            }
-            if (sinal == "&" && a == "V" && b == "V") {
-                if (i == 0) {
-                    a = true;
-                } else if (i == 1) {
-                    b = true;
-                }
-            } else if (sinal == "&" && a != "V" || b != "V") {
-                if (i == 0){
-                    a = false;
-                } else if (i == 1) {
-                    b = false;
-                }
-            }
-            if (sinal == ">" && a == "V" && b == "F") {
-                if (i == 0) {
-                    a = false;
-                } else if (i == 1) {
-                    b = false;
-                }
-            } else if (sinal == ">" && a != "V" || b != "F") {
-                if (i == 0) {
-                    a = true;
-                } else if (i == 1) {
-                    b = true;
-                }
-            }
-            if (sinal == "<" && a == b) {
-                if (i == 0) {
-                    a = true;
-                } else if (i == 1) {
-                    b = true;
-                }
-            } else if (sinal == "<" && a != b) {
-                if (i == 0) {
-                    a = false;
-                } else if (i == 1) {
-                    b = false;
-                }
-            }
+    if (sinal == "&" && a == "V" && b == "V") {
+        if (i == 0) {
+            aa = true;
+        } else if (i == 1) {
+            bb = true;
         }
+    } else if (sinal == "&" && a != "V" || b != "V") {
+        if (i == 0){
+            aa = false;
+        } else if (i == 1) {
+            bb = false;
+        }
+    }
+    if (sinal == "v" && a == "F" && b == "F") {
+        if (i == 0) {
+            aa = false;
+        } else if (i == 1) {
+            bb = false;
+        }
+    } else if (sinal == "v" && a != "F" || b != "F") {
+        if (i == 0){
+            aa = true;
+        } else if (i == 1) {
+            bb = true;
+        }
+    }
+    if (sinal == ">" && a == "V" && b == "F") {
+        if (i == 0) {
+            aa = false;
+        } else if (i == 1) {
+            bb = false;
+        }
+    } else if (sinal == ">" && a != "V" || b != "F") {
+        if (i == 0) {
+            aa = true;
+        } else if (i == 1) {
+            bb = true;
+        }
+    }
+    if (sinal == "<" && a == b) {
+        if (i == 0) {
+            aa = true;
+        } else if (i == 1) {
+            bb = true;
+        }
+    } else if (sinal == "<" && a != b) {
+        if (i == 0) {
+            aa = false;
+        } else if (i == 1) {
+            bb = false;
+        }
+    }
+}
         var sinal2 = prompt("Apresente o sinal lógico entre as duas equações: '>', '&', 'v', ou '<>'.")
         switch (sinal2) {
             case "&":
@@ -65,6 +65,25 @@
             case "v":
                 logica = a || b;
                 console.log(`A operação tem valor ${logica}`);
+                break;
+            case ">":
+                if (a == true && b == false) {
+                    logica = false;
+                }else if (a != true && b != false) {
+                    logica = true;
+                }
+                console.log(`A operação tem valor ${logica}`);
+                break;
+            case "<>":
+                if (a == b) {
+                    logica = true;
+                } else if (a != b) {
+                    logica = false;
+                }
+                console.log(`A operação tem valor ${logica}`);
+                break;
+        }
+        </script>
                 break;
             case ">":
                 if (a == true && b == false) {
